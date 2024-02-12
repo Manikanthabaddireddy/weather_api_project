@@ -20,7 +20,7 @@
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@utcNow('yyyy-MM-dd HH:mm:ss')",
+					"value": "@utcNow('yyyy-MM-dd HH')",
 					"type": "Expression"
 				},
 				"fileSystem": "landingzone"
