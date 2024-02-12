@@ -13,7 +13,7 @@
 		},
 		"parameters": {
 			"city": {
-				"type": "String"
+				"type": "array"
 			}
 		},
 		"annotations": [],
