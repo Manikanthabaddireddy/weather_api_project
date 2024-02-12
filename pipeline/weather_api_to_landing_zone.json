@@ -80,10 +80,7 @@
 			"cities": {
 				"type": "Array",
 				"defaultValue": [
-					1,
-					2,
-					3,
-					4
+					"['kakinada','hyderabad']"
 				]
 			}
 		},
