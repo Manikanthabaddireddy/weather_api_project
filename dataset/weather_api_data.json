@@ -1,0 +1,31 @@
+{
+	"name": "weather_api_data",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"city": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().city",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@utcNow('yyyy-MM-dd')",
+					"type": "Expression"
+				},
+				"fileSystem": "landingzone"
+			}
+		},
+		"schema": {}
+	}
+}

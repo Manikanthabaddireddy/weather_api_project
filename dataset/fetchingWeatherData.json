@@ -1,0 +1,23 @@
+{
+	"name": "fetchingWeatherData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RestService1",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"city": {
+					"value": "@dataset().city",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"city": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}
