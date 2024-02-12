@@ -81,7 +81,12 @@
 				"type": "array",
 				"defaultValue": [
 					"kakinada",
-					"hyderabad"
+					"hyderabad",
+					"chikago",
+					"new york",
+					"chennai",
+					"goa",
+					"pune"
 				]
 			}
 		},
