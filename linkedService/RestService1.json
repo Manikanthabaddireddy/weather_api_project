@@ -9,7 +9,7 @@
 		"annotations": [],
 		"type": "RestService",
 		"typeProperties": {
-			"url": "@{concat('https://api.openweathermap.org/data/2.5/weather?q=',linkedService().city,'&','appid=2d055d3e596828432917396a3fb8948c')}",
+			"url": "@{concat('https://api.openweathermap.org/data/2.5/forecast?q=',linkedService().city,'&','appid=2d055d3e596828432917396a3fb8948c')}",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
