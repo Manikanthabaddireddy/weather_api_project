@@ -15,20 +15,12 @@
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Set variable1",
-							"type": "SetVariable",
+							"name": "Wait1",
+							"type": "Wait",
 							"dependsOn": [],
-							"policy": {
-								"secureOutput": false,
-								"secureInput": false
-							},
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "cities",
-								"value": {
-									"value": "@item()",
-									"type": "Expression"
-								}
+								"waitTimeInSeconds": 1
 							}
 						}
 					]
@@ -39,8 +31,10 @@
 			"cities": {
 				"type": "Array",
 				"defaultValue": [
-					"hyderabad",
-					"kakinada"
+					1,
+					2,
+					3,
+					4
 				]
 			}
 		},
