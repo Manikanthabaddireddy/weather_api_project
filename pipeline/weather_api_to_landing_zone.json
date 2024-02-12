@@ -53,7 +53,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"city": {
-											"value": "@item().cities",
+											"value": "@item().city",
 											"type": "Expression"
 										}
 									}
@@ -65,7 +65,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"city": {
-											"value": "@item().cities",
+											"value": "@item().city",
 											"type": "Expression"
 										}
 									}
