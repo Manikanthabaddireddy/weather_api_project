@@ -37,11 +37,8 @@
 		],
 		"variables": {
 			"cities": {
-				"type": "Array",
-				"defaultValue": [
-					"hyderabad",
-					"kakinada"
-				]
+				"type": "String",
+				"defaultValue": "[\"hyderabad\",\"kakinada\"]"
 			}
 		},
 		"folder": {
