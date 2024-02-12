@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@variables('cities')",
+						"value": "@pipeline().parameters.cities",
 						"type": "Expression"
 					},
 					"isSequential": true,
@@ -53,7 +53,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"city": {
-											"value": "@item().city",
+											"value": "@item().cities",
 											"type": "Expression"
 										}
 									}
@@ -65,7 +65,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"city": {
-											"value": "@item().city",
+											"value": "@item().cities",
 											"type": "Expression"
 										}
 									}
@@ -76,11 +76,12 @@
 				}
 			}
 		],
-		"variables": {
+		"parameters": {
 			"cities": {
-				"type": "Array",
+				"type": "array",
 				"defaultValue": [
-					"['kakinada','hyderabad']"
+					"kakinada",
+					"hyderabad"
 				]
 			}
 		},
