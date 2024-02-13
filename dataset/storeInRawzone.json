@@ -1,25 +1,16 @@
 {
-	"name": "Json2",
+	"name": "storeInRawzone",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
-		},
-		"parameters": {
-			"date": {
-				"type": "String"
-			}
 		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": {
-					"value": "@dataset().date",
-					"type": "Expression"
-				},
-				"fileSystem": "landingzone"
+				"fileSystem": "rawzone"
 			}
 		},
 		"schema": {}

@@ -51,8 +51,8 @@
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Get Metadata2",
-							"type": "GetMetadata",
+							"name": "Copy data1",
+							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
 								"timeout": "0.12:00:00",
@@ -63,24 +63,46 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"dataset": {
-									"referenceName": "Json2",
-									"type": "DatasetReference"
-								},
-								"fieldList": [
-									{
-										"value": "@activity('Get Metadata1').output.childItems[0].name",
-										"type": "Expression"
+								"source": {
+									"type": "JsonSource",
+									"storeSettings": {
+										"type": "AzureBlobFSReadSettings",
+										"recursive": true,
+										"enablePartitionDiscovery": false
+									},
+									"formatSettings": {
+										"type": "JsonReadSettings"
 									}
-								],
-								"storeSettings": {
-									"type": "AzureBlobFSReadSettings",
-									"enablePartitionDiscovery": false
 								},
-								"formatSettings": {
-									"type": "JsonReadSettings"
+								"sink": {
+									"type": "JsonSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "JsonWriteSettings"
+									}
+								},
+								"enableStaging": false
+							},
+							"inputs": [
+								{
+									"referenceName": "Json2",
+									"type": "DatasetReference",
+									"parameters": {
+										"date": {
+											"value": "@activity('Get Metadata1').output.childItems[0].name",
+											"type": "Expression"
+										}
+									}
 								}
-							}
+							],
+							"outputs": [
+								{
+									"referenceName": "storeInRawzone",
+									"type": "DatasetReference"
+								}
+							]
 						}
 					]
 				}
