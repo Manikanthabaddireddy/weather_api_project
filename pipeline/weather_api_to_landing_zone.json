@@ -93,6 +93,8 @@
 		"folder": {
 			"name": "weather_api_landing_zone"
 		},
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2024-02-12T11:26:57Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }
