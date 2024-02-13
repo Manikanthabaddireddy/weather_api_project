@@ -69,7 +69,7 @@
 								},
 								"fieldList": [
 									{
-										"value": "@item().name",
+										"value": "@item()",
 										"type": "Expression"
 									}
 								],
