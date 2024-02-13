@@ -10,6 +10,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@utcNow('yyyy-MM-dd HH')",
+					"type": "Expression"
+				},
 				"fileSystem": "rawzone"
 			}
 		},
