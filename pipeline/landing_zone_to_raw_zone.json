@@ -69,7 +69,7 @@
 								},
 								"fieldList": [
 									{
-										"value": "@activity('Get Metadata1').output.childItems[0]",
+										"value": "@activity('Get Metadata1').output.childItems[0].name",
 										"type": "Expression"
 									}
 								],
