@@ -11,9 +11,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
 		},
+		"AzureDatabricksforweatherapi_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksforweatherapi'"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://mani2110.dfs.core.windows.net/"
+		},
+		"AzureDatabricksforweatherapi_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "0212-142033-1umv4dee"
 		},
 		"RestService1_properties_typeProperties_url": {
 			"type": "string",
@@ -49,8 +57,14 @@
 					"AzureDataLakeStorage1_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
 					},
+					"AzureDatabricksforweatherapi_accessToken": {
+						"value": "[parameters('AzureDatabricksforweatherapi_accessToken')]"
+					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDatabricksforweatherapi_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('AzureDatabricksforweatherapi_properties_typeProperties_existingClusterId')]"
 					},
 					"RestService1_properties_typeProperties_url": {
 						"value": "[parameters('RestService1_properties_typeProperties_url')]"
